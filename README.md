@@ -56,7 +56,7 @@ npm install
 Setup database with:
 
 ```
-   rails db:migrate
+rails db:migrate
 ```
 
 If you get and error while creating the database then you have to install Postgres, follow the steps [here](https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart), once installed you only need to create a user and the database.
@@ -67,11 +67,11 @@ sudo -u postgres psql
 ```
 Then type:
 ```
-createdb twitterdb
+createdb db/helloreactrails
 ```
 Now you cant try to create the database again.
 
-To make easier the creation of the database, use to create the database and create the tables at the same time:
+To make easier the creation of the database, type the following the database and create the tables at the same time:
 ```
 bash createdb.sh
 ```
@@ -81,7 +81,7 @@ bash createdb.sh
 Start server with:
 
 ```
-    rails server
+rails server
 ```
 
 Then enter:
@@ -93,7 +93,7 @@ This will run the react and redux server.
 Now you can open `http://localhost:3000/` in your browser.
 
 To acces to the api greeting display acces to :
-`http://localhost:3000/greeting`
+[http://localhost:3000/greeting](http://localhost:3000/greeting)
 
 ### Build With
 
