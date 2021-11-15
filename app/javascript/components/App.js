@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Greeting from "./Greeting"
 import { Provider } from 'react-redux';

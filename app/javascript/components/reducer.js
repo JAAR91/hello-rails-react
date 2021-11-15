@@ -8,12 +8,11 @@ export const loadData = (payload) => ({
   payload,
 });
 
-export const fetchData = (payload) => ({
+export const fetchData = () => ({
   type: FETCH_API_DATA,
-  payload,
 });
 
-export const fetchApiData = (store) => (next) => (action) => {
+export const fetchApiData = () => (next) => (action) => {
   switch (action.type) {
     case FETCH_API_DATA:
       fetch(`http://localhost:3000/api/v1/greetings`)
@@ -30,7 +29,7 @@ export const fetchApiData = (store) => (next) => (action) => {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_DATA:
-      return action.payload.message;
+      return action.payload;
     default:
       return state;
   }

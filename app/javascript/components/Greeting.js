@@ -1,17 +1,21 @@
 import React, { useEffect } from "react"
-import { useSelector, dispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux'
+import { fetchData } from "./reducer";
 
-function Greeting() {
-  const message = useSelector((state) => state);
-  console.log(message);
-
+const Greeting = () => {
+  const message = useSelector((state) => state.message);
+  const dispatch = useDispatch();
+  const fetchDataBound = bindActionCreators(fetchData, dispatch);
+  
   useEffect(() => {
-    
+    fetchDataBound();
   }, []);
+
 
   return (
     <React.Fragment>
-      Greeting: {" greeeeting!!"}
+      Greeting: { message }
     </React.Fragment>
   );
 }
